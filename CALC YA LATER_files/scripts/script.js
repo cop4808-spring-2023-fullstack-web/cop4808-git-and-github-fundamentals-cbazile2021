@@ -180,18 +180,23 @@ function operate(x, y, op) {
         if(y === 0) {
             return 'lmao';
         } else {
-        return x / y;
+            return x / y;
         }
     }
+    //////////ADDING 4 new functions to the new buttons
+    //Function to calculate the input to the power of 2
     else if(op === 'xx') {
         return x * x;
     }
+    //Function to calculate the natural log of a number
     else if(op === 'ln') {
         return Math.log(x);
     }
+    //Function to calculate the natural log of a number
     else if(op === 'sqrt') {
         return Math.sqrt(x);
     }
+    //Function to turn off the calculator
     else if(op === 'off') {
         return 'POWER OFF';
     }
@@ -206,32 +211,3 @@ function roundAccurately(num, places) {
 
 
 
-//////////ADDING 4 new functions to the new buttons
-
-//Function to calculate the input to the power of 2
-function tothepow(x, op) {
-    if(op === 'xx') {
-        return x * x;
-    }
-}
-
-//Function to calculate the natural log of a number
-function natlog(x, op){
-    if(op === 'ln') {
-        return Math.log(x);
-    }
-}
-
-//Function to calculate the natural log of a number
-function squrt(x, op){
-    if(op === 'sqrt') {
-        return Math.sqrt(x);
-    }
-}
-
-//Function to turn off the calculator
-function  poweroff(x, op){
-    if(op === 'off') {
-        return 'POWER OFF';
-    }
-}
