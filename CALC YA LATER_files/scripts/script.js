@@ -179,6 +179,38 @@ function operate(x, y, op) {
     }
 }
 
+
 function roundAccurately(num, places) {
     return parseFloat(Math.round(num + 'e' + places) + 'e-' + places);
+}
+
+
+//////////ADDING 4 new functions to the new buttons
+
+//Function to calculate the input to the power of 2
+function tothepow(x, op) {
+    if(op === 'xx') {
+        return x * x;
+    }
+}
+
+//Function to calculate the natural log of a number
+function natlog(x, op){
+    if(op === 'ln') {
+        return Math.log(x);
+    }
+}
+
+//Function to calculate the natural log of a number
+function squrt(x, op){
+    if(op === 'sqrt') {
+        return Math.sqrt(x);
+    }
+}
+
+//Function to turn off the calculator
+function  poweroff(x, op){
+    if(op === 'ln') {
+        return 'POWER OFF, BYE!';
+    }
 }
