@@ -45,6 +45,7 @@ function clickButton() {
                 clearDisplay();
                 updateDisplay();
             }
+            //dipay off button
               else if(buttons[i].classList.contains('off')) {
                 inputOff(displayValue);
                 updateDisplay();
@@ -182,6 +183,18 @@ function operate(x, y, op) {
         return x / y;
         }
     }
+    else if(op === 'xx') {
+        return x * x;
+    }
+    else if(op === 'ln') {
+        return Math.log(x);
+    }
+    else if(op === 'sqrt') {
+        return Math.sqrt(x);
+    }
+    else if(op === 'off') {
+        return 'POWER OFF';
+    }
 }
 
 
@@ -189,16 +202,6 @@ function roundAccurately(num, places) {
     return parseFloat(Math.round(num + 'e' + places) + 'e-' + places);
 }
 
-/// FUNCTIONS NEW 
-
-function inputOffy() {
-    displayValue = 'POWER OFF';
-    firstOperand = null;
-    secondOperand = null;
-    firstOperator = null;
-    secondOperator = null;
-    result = null;
-}
 
 
 
@@ -228,7 +231,7 @@ function squrt(x, op){
 
 //Function to turn off the calculator
 function  poweroff(x, op){
-    if(op === 'ln') {
+    if(op === 'off') {
         return 'POWER OFF';
     }
 }
