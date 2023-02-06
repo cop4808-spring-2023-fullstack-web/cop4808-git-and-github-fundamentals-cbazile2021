@@ -1,4 +1,5 @@
 let displayValue = '0';
+let displayValue1 = "POWER OFF"
 let firstOperand = null;
 let secondOperand = null;
 let firstOperator = null;
@@ -47,7 +48,7 @@ function clickButton() {
             }
             //dipay off button
               else if(buttons[i].classList.contains('off')) {
-                inputOff(displayValue);
+                clearDisplay1(displayValue1);
                 updateDisplay();
             }
     }
@@ -161,6 +162,9 @@ function clearDisplay() {
     secondOperator = null;
     result = null;
 }
+function clearDisplay1() {
+    displayValue1 = 'POWER OFF';
+}
 
 function inputBackspace() {
     if(firstOperand != null) {
@@ -198,7 +202,7 @@ function operate(x, y, op) {
     }
     //Function to turn off the calculator
     else if(op === 'off') {
-        return 'POWER OFF';
+        return clearDisplay1;
     }
 }
 
